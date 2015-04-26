@@ -1,7 +1,7 @@
-## Put comments here that give an overall description of what your
-## functions do
+## For large matrices, it may take too long to compute the inverse. 
+## If you need to do that repeatedly, and the contents of the matrix are not changing, it makes sense to cache the value of the inverse.
 
-## Write a short comment describing this function
+## Use this function to set the matrix to be cached. This will be the parameter to put into the next function
 
 makeCacheMatrix <- function(x = matrix()) {
   s <- NULL
@@ -18,7 +18,7 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## Write a short comment describing this function
+## This is the function that will solve your matrix. It will do it only once, and in the next time it is called, it will simply use the cache.
 
 cacheSolve <- function(x, ...) {
   s <- x$getsolve()
